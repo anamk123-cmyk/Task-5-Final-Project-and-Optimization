@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Program - Unleash the Athlete</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <style>
+        /* Additional styles for the grid layout */
+        .workout-details .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .workout-details .cols {
+            flex: 1 1 calc(33.333% - 10px);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .workout-details .box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Optional: Adjusting font size and padding for a balanced layout */
+        .workout-details h2 {
+            font-size: 24px;
+        }
+
+        .workout-details p {
+            font-size: 16px;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!----------------------------navigation bar----------------------------->
+<div class="navbar">
+    <a href="#" class="logo">V<B>A</B>.</a>
+    <div class="toggle" onclick="navToggle();"></div>
+    <ol>
+        <li><a href="index.html#home" onclick="navToggle();">home</a></li>
+        <li><a href="index.html#about" onclick="navToggle();">about</a></li>
+        <li><a href="index.html#workout" onclick="navToggle();">workout</a></li>
+        <li><a href="index.html#trainers" onclick="navToggle();">trainers</a></li>
+        <li><a href="index.html#diet" onclick="navToggle();">diet</a></li>
+        <li><a href="index.html#contact" onclick="navToggle();">contact</a></li>
+    </ol>
+</div>
+
+<!----------------------------------Workout 5 Section------------------>
+<section id="workout5" class="workout-details view">
+    <div class="main">
+        <h2><span>C</span>ore <span>S</span>trength</h2>
+        <h6>Focus on building a strong and stable core with this specialized workout program.</h6>
+    </div>
+    
+    <div class="content">
+        <div class="cols">
+            <p>This program targets all the muscles in your core, including abs, obliques, and lower back, to improve stability and strength.</p>
+            <ul>
+                <li>Day 1: Abdominal Circuit - Crunches, Leg Raises</li>
+                <li>Day 2: Core Stability - Planks, Side Planks</li>
+                <li>Day 3: Lower Back Strength - Superman, Deadlifts</li>
+                <li>Day 4: Active Recovery - Light Cardio & Stretching</li>
+                <li>Day 5: Oblique Focus - Russian Twists, Side Bends</li>
+                <li>Day 6: Full-Body Core Circuit</li>
+                <li>Day 7: Rest Day</li>
+            </ul>
+        </div>
+        <div class="cols">
+            <div class="box">
+                <img src="workout5.jpg" alt="Core Strength">
+            </div>       
+        </div>  
+    </div>
+</section>
+
+
+<!---------------------------copyright------------------------->
+<section class="copyright">
+    &copy; copyright <a href="#">VishaAnam</a> 2024 | All Rights Reserved
+</section>
+
+<!---------------------------javascript code here-------------------->
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle("sticky", window.scrollY > 50);
+    })
+
+    const togglebar = document.querySelector('.toggle');
+    const menu = document.querySelector('ol');
+
+    function navToggle(){
+        togglebar.classList.toggle("active");
+        menu.classList.toggle("active");
+    }
+</script>
+</body>
+</html>

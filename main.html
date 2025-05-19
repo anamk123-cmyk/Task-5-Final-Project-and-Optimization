@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Responsive Website Using Html,CSS and Javascript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+<!----------------------------navigation bar------------------------------->
+
+<div class="navbar">
+    <a  href="#" class="logo">A<B>K</B>.</a>
+    <div class="toggle" onclick="navToggle();"></div>
+    <ol>
+        <li><a href="#home" onclick="navToggle();">home</a></li>
+        <li><a href="#about" onclick="navToggle();">about</a></li>
+        <li><a href="#workout" onclick="navToggle();">workout</a></li>
+        <li><a href="#trainers" onclick="navToggle();">trainers</a></li>
+        <li><a href="#diet" onclick="navToggle();">diet</a></li>
+        <li><a href="#contact" onclick="navToggle();">contact</a></li>
+    </ol>
+</div>
+
+<!----------------------------------Home section------------------>
+
+<section id="home" class="home view">
+    <div class="highlights">
+        <h3>feel the power with</h3>
+        <h1><b>FIT</b>PRO</h1><br>
+        <p class="tagline">
+            Your Fitness Journey Starts Here
+        </p>
+        <button class="join">join now</button>
+        <script>
+            function openForm() {
+                window.location.href = "form.html";
+            }
+            document.querySelector('.join').onclick = openForm;
+        </script>
+    </div>
+    <div class="banner"></div>
+</section>
+
+<!------------------------------------about section-------------------->
+<section id="about" class="about view" >
+    <div class="main">
+        <h2><span>A</span>bout Us</h2>
+        <h6>Our mission is to empower individuals to reach their fitness goals through state-of-the-art facilities, expert coaching, and a supportive community. We believe in the transformative power of fitness, not just for the body, but for the mind and spirit as well.</h6>
+    </div>
+    <div class="content">
+        <div class="cols">
+            <p><b>O</b>ur gym is equipped with state-of-the-art equipment, and our certified trainers are dedicated to providing personalized guidance to help you reach your full potential. Whether you're here for strength training, group classes, or overall wellness, we offers a diverse range of programs to meet your needs. We believe that fitness is more than just a workout—it's a lifestyle, and we're here to support you every step of the way. Join us today and become part of a community that's committed to helping you succeed in your fitness journey.</p>
+            <a href="#">more</a>
+        </div>
+        <div class="cols">
+            <div class="box">
+                <img src="about.jpg" alt=""> 
+            </div>       
+        </div>  
+    </div>
+</section>
+
+
+<!-----------------workout section---------------->
+<section id="workout" class="workout view">
+    <div class="main">
+        <h2><span>W</span>orkout</h2>
+        <h6>We offer a variety of workout programs designed to help you achieve your fitness goals, whether you're just starting your journey or you're a seasoned athlete. Explore our offerings and find the perfect fit for your lifestyle.</h6>
+    </div>
+
+    <div class="content">
+        <div class="frame">
+            <a href="workout1.html"> <!-- Link to new page -->
+                <div class="box">
+                    <img src="workout1.jpg" alt="">
+                </div>
+                <div class="title">Workout1</div>
+                <p>Fitness Redefined Unleash the Athlete in You</p>
+            </a>
+        </div>
+
+        <div class="frame">
+            <a href="workout2.html"> <!-- Link to new page -->
+                <div class="box">
+                    <img src="workout2.jpg" alt="">
+                </div>
+                <div class="title">Workout2</div>
+                <p>Fitness Redefined Unleash the Athlete in You</p>
+            </a>
+        </div>
+
+        <div class="frame">
+            <a href="workout3.html"> <!-- Link to new page -->
+                <div class="box">
+                    <img src="workout3.jpg" alt="">
+                </div>
+                <div class="title">Workout3</div>
+                <p>Fitness Redefined Unleash the Athlete in You</p>
+            </a>
+        </div>
+
+        <div class="frame">
+            <a href="workout4.html"> <!-- Link to new page -->
+                <div class="box">
+                    <img src="workout4.jpg" alt="">
+                </div>
+                <div class="title">Workout4</div>
+                <p>Fitness Redefined Unleash the Athlete in You</p>
+            </a>
+        </div>
+
+        <div class="frame">
+            <a href="workout5.html"> <!-- Link to new page -->
+                <div class="box">
+                    <img src="workout5.jpg" alt="">
+                </div>
+                <div class="title">Workout5</div>
+                <p>Fitness Redefined Unleash the Athlete in You</p>
+            </a>
+        </div>
+
+        <div class="frame">
+            <a href="workout6.html"> <!-- Link to new page -->
+                <div class="box">
+                    <img src="workout6.jpg" alt="">
+                </div>
+                <div class="title">Workout6</div>
+                <p>Fitness Redefined Unleash the Athlete in You</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!------------------------trainers section------------------->
+<section id="trainers" class="trainers view">
+    <div class="main">
+        <h2><span>B</span>est<span>T</span>rainers</h2>
+        <h6>We offer a variety of workout programs designed to help you achieve your fitness goals, whether you're just starting your journey or you're a seasoned athlete. Explore our offerings and find the perfect fit for your lifestyle.</h6>
+    </div>
+
+    <div class="content">
+        <div class="frame">
+            <div class="box">
+                <img src="trainer.jpg" alt="">
+            </div>
+            <div class="headline">
+               <div class="title">Someone Famous</div>
+               <div class="icons">
+                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-twitter"></i>
+                  <i class="fa fa-instagram"></i>
+               </div>
+            </div>   
+            <p>Fitness Redefined Unleash the Athlete in You</p>
+            <a href="trainer1.html">Explore</a> <!-- Link to the new page -->
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="trainer2.jpg" alt="">
+            </div>
+            <div class="headline">
+               <div class="title">Another Trainer</div>
+               <div class="icons">
+                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-twitter"></i>
+                  <i class="fa fa-instagram"></i>
+               </div>
+            </div>   
+            <p>Fitness Redefined Unleash the Athlete in You</p>
+            <a href="trainer2.html">Explore</a> <!-- Link to the new page -->
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="trainer3.jpg" alt="">
+            </div>
+            <div class="headline">
+               <div class="title">Expert Trainer</div>
+               <div class="icons">
+                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-twitter"></i>
+                  <i class="fa fa-instagram"></i>
+               </div>
+            </div>   
+            <p>Fitness Redefined Unleash the Athlete in You</p>
+            <a href="trainer3.html">Explore</a> <!-- Link to the new page -->
+        </div>
+
+        <div class="frame">
+            <div class="box">
+                <img src="trainer4.jpg" alt="">
+            </div>
+            <div class="headline">
+               <div class="title">Pro Trainer</div>
+               <div class="icons">
+                  <i class="fa fa-facebook"></i>
+                  <i class="fa fa-twitter"></i>
+                  <i class="fa fa-instagram"></i>
+               </div>
+            </div>   
+            <p>Fitness Redefined Unleash the Athlete in You</p>
+            <a href="trainer4.html">Explore</a> <!-- Link to the new page -->
+        </div>
+    </div> 
+</section>
+
+
+<!-----------------------Diet section---------------------->
+<section id="diet" class="diet view">
+    <div class="main">
+        <h2><span>S</span>pecial<span>D</span>iet</h2>
+        <h6>Discover the essential role of nutrition in achieving your fitness goals.</h6>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">boiled eggs</div>
+                <p>Boiled eggs are a powerhouse of protein, perfect for muscle recovery and growth. Rich in essential vitamins and minerals, they provide a low-calorie, nutrient-dense snack ideal for any fitness routine. Whether you're aiming to build muscle or lose weight, boiled eggs offer a quick and convenient way to fuel your body with high-quality nutrition.</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="diet.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">dry fruits</div>
+                <p>Dry fruits are an essential part of a balanced diet, offering a rich source of vitamins, minerals, fiber, and healthy fats. Almonds, walnuts, cashews, and dates provide sustained energy, support muscle recovery, and promote heart health. Incorporating dry fruits into your gym routine can enhance performance, aid in weight management, and boost overall wellness. Enjoy them as a pre-workout snack or a nutritious post-workout treat.</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="diet2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">healthy drinks</div>
+                <p>Boost your fitness journey with our selection of healthy drinks. From hydrating green smoothies packed with leafy greens and fruits to protein-rich shakes for post-workout recovery, these beverages are designed to fuel your body and support your goals. Stay refreshed and energized with natural ingredients that enhance performance and aid in muscle recovery, while keeping your calorie intake in check.</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="diet3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">diet salad</div>
+                <p>A diet salad is a nutritious and low-calorie option perfect for those looking to maintain or lose weight while staying active. Packed with fresh vegetables, lean proteins, and healthy fats, these salads provide essential vitamins, minerals, and fiber to support overall health. Ideal for gym-goers, diet salads help fuel workouts, aid in recovery, and keep you feeling satisfied without the extra calories.</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="diet4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">meat and veggies</div>
+                <p>A balanced diet is essential for optimal performance in the gym. A meat and veggies plate offers a perfect combination of protein and fiber. Lean meats like chicken or fish provide the necessary protein to support muscle growth and repair, while a variety of colorful vegetables supply essential vitamins, minerals, and antioxidants. This meal not only fuels your workouts but also aids in recovery, helping you achieve your fitness goals effectively.</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="diet5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">mix veggies</div>
+                <p>A mixed veggies plate is a nutrient-packed option perfect for any diet plan. It typically includes a variety of colorful vegetables like bell peppers, broccoli, carrots, and spinach, providing essential vitamins, minerals, and fiber. This low-calorie dish is ideal for supporting muscle recovery and maintaining energy levels, making it an excellent choice for gym-goers aiming to stay fit and healthy.</p>
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="diet6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-----------------------------------contact section--------------------------------------->
+<section id="contact" class="contact view">
+    <div class="main">
+        <h2><span>C</span>ontact</h2>
+        <h6>Discover the essential role of nutrition in achieving your fitness goals.</h6>
+    </div>
+
+    <div class="content">
+        <form method="GET" id="form">
+            <input type="text" placeholder="User" name="user" id="user">
+            <input type="email" placeholder="Email" name="email" id="email">
+            <textarea rows="5" placeholder="what's on your mind" name="des" id="des"></textarea>
+            <br>
+            <input type="submit" value="submit" class="" id="save_btn">
+        </form>
+    </div>
+</section> 
+
+
+
+
+
+<!---------------------------copyright------------------------->
+
+<section class="copyright">
+    &copy; copyright <a href="#">AnamKazi</a> 2025 | All Rights Reserved
+</section>
+ <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+
+<script>
+
+
+
+
+
+
+
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle("sticky", window.scrollY > 50);
+    })
+
+    const togglebar = document.querySelector('.toggle');
+    const menu = document.querySelector('ol');
+
+    function navToggle(){
+        togglebar.classList.toggle("active");
+        menu.classList.toggle("active");
+    }
+</script>
+
+
+
+<script>
+    
+   $(document).on("submit","#form", function(e){
+        e.preventDefault();
+        
+        $("#save_btn").html('Saving..');
+        
+        $.ajax({
+            url: 'http://localhost:8000/ajax/Create-contact.php',
+            method: 'GET',
+            data: new FormData(this),
+            contentType: false,
+            cache: false,
+            processData: false,
+            success:function(data){
+               if(data==1){
+               
+                    Swal.fire(
+                      'Done!',
+                      'Contact Created Successfully!',
+                      'success'
+                    )
+          setInterval(load_reload,2000);
+          function load_reload(){
+              location.reload();
+          }
+            
+             }else{
+                    
+                    $("#save_btn").html('Error..');
+                    Swal.fire(
+                      'Sorry!',
+                      data,
+                      'error'
+                    )
+                }
+             
+            }
+        });
+    });
+  
+    
+    
+    
+    
+</script>
+
+
+
+</body>
+</html>

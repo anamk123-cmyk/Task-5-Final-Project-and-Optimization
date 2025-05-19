@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Fitness Classes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <section id="manage-fitness-classes">
+        <h2>Manage Fitness Classes</h2>
+        <form id="fitness-class-form">
+            <label for="class-name">Class Name:</label>
+            <input type="text" id="class-name" name="class_name" placeholder="Enter class name">
+            <label for="class-time">Class Time:</label>
+            <input type="text" id="class-time" name="class_time" placeholder="Enter class time">
+            <input type="submit" value="Add Fitness Class">
+        </form>
+        <h3>Existing Fitness Classes:</h3>
+        <ul id="fitness-class-list"></ul>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            // Load existing fitness classes
+            $.getJSON('fitness_classes.json', function(data) {
+                data.classes.forEach(function(fitnessClass) {
+                    $('#fitness-class-list').append('<li>' + fitnessClass.name + ' - ' + fitnessClass.time + '</li>');
+                });
+            });
+
+            // Handle form submission
+            $('#fitness-class-form').on('submit', function(e) {
+                e.preventDefault();
+                var className = $('#class-name').val();
+                var classTime = $('#class-time').val();
+                $.ajax({
+                    url: 'save_fitness_classes.php',
+                    method: 'POST',
+                    data: { class_name: className, class_time: classTime },
+                    success: function(response) {
+                        if(response == 'success') {
+                            $('#fitness-class-list').append('<li>' + className + ' - ' + classTime + '</li>');
+                            $('#class-name').val('');
+                            $('#class-time').val('');
+                        } else {
+                            alert('Error saving fitness class');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

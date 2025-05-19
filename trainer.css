@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Trainer Profile Section */
+.trainer-profile {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.trainer-profile h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Profile Details */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.details {
+    max-width: 500px;
+    text-align: left;
+}
+
+.details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details ul li {
+    background: #eee;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Social Media Icons */
+.icons {
+    margin-top: 20px;
+}
+
+.icons i {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.icons i:hover {
+    color: #007bff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}

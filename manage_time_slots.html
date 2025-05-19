@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Time Slots</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <section id="manage-time-slots">
+        <h2>Manage Time Slots</h2>
+        <form id="time-slot-form">
+            <label for="time-slot">Time Slot:</label>
+            <input type="text" id="time-slot" name="time_slot" placeholder="Enter time slot">
+            <input type="submit" value="Add Time Slot">
+        </form>
+        <h3>Existing Time Slots:</h3>
+        <ul id="time-slot-list"></ul>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            // Load existing time slots
+            $.getJSON('time_slots.json', function(data) {
+                data.time_slots.forEach(function(slot) {
+                    $('#time-slot-list').append('<li>' + slot + '</li>');
+                });
+            });
+
+            // Handle form submission
+            $('#time-slot-form').on('submit', function(e) {
+                e.preventDefault();
+                var timeSlot = $('#time-slot').val();
+                $.ajax({
+                    url: 'save_time_slots.php',
+                    method: 'POST',
+                    data: { time_slot: timeSlot },
+                    success: function(response) {
+                        if(response == 'success') {
+                            $('#time-slot-list').append('<li>' + timeSlot + '</li>');
+                            $('#time-slot').val('');
+                        } else {
+                            alert('Error saving time slot');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
